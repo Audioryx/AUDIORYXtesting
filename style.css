@@ -1,0 +1,77 @@
+:root {
+    --green: #39ff14;
+    --black: #000;
+    --glass: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --blur: 25px;
+}
+
+body {
+    background: var(--black);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 100px;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-right: 1px solid var(--border);
+    align-items: center;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+    color: var(--green);
+    transform: scale(1.1);
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border-top: 1px solid var(--border);
+}
+
+.accent {
+    color: var(--green);
+}
